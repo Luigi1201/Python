@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Oct 21 16:58:33 2021
+
+@author: Luigi
+"""
+
+maxRighe, maxColonne=5, 18
+numerorigacorrente=1
+while numerorigacorrente<=maxRighe:    
+    numerocolonnacorrente=1
+    counter=1
+    while numerocolonnacorrente<=maxColonne:
+        if numerorigacorrente==1 or numerorigacorrente==maxRighe: 
+            print("*",end="")
+        else:           
+            if counter==1:
+                print("*",end='')
+            if counter==maxColonne:
+                print("*",end='')
+            if counter>1 and counter<maxColonne:
+                print(" ",end='')
+            counter+=1
+        numerocolonnacorrente+=1
+    print("")                     
+    numerorigacorrente+=1     
