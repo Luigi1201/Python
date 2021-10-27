@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 27 09:56:58 2021
+
+@author: Luigi
+"""
+# Data una parola inserita dall'utente determinare se è polindroma o meno
+
+parola=input("Inserire una parola: ")
+lunghezzaParola=len(parola)
+counter=lunghezzaParola-1
+nuovaParola=""
+while counter>=0:
+    nuovaParola+=parola[counter]
+    counter-=1
+if parola==nuovaParola:
+    print("polindroma")
+else:
+    print("non polindroma")
