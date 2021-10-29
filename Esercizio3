@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Oct 28 19:20:08 2021
+
+@author: Luigi
+
+Scrivere un programma in cui trovata la prima lettera coincidente tra due parole si incrocino le due per mezzo di essa
+"""
+
+p1=input("inserire una parola: ")
+p2=input("inserire una parola: ")
+posizione=-1
+letteraTrovata=""
+condizione=True
+try:  
+    while condizione:
+        posizione+=1
+        for x in p2:
+            if p1[posizione]==x:
+                letteraTrovata=x
+                condizione=False
+except(IndexError):
+    print("Non c'è nessuna corrispondenza tra le due parole!")
+    
+ok=False
+for lettera in p2:
+    if lettera==letteraTrovata and ok==False:
+        print(p1)
+        ok=True
+    else:
+        for i in range(posizione):
+            print(" ",end="")
+        print(lettera)
